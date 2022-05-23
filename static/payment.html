@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <section id="nav-section">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone-vibrate-fill" viewBox="0 0 16 16">
+            <path d="M4 4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm5 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM1.807 4.734a.5.5 0 1 0-.884-.468A7.967 7.967 0 0 0 0 8c0 1.347.334 2.618.923 3.734a.5.5 0 1 0 .884-.468A6.967 6.967 0 0 1 1 8c0-1.18.292-2.292.807-3.266zm13.27-.468a.5.5 0 0 0-.884.468C14.708 5.708 15 6.819 15 8c0 1.18-.292 2.292-.807 3.266a.5.5 0 0 0 .884.468A7.967 7.967 0 0 0 16 8a7.967 7.967 0 0 0-.923-3.734zM3.34 6.182a.5.5 0 1 0-.93-.364A5.986 5.986 0 0 0 2 8c0 .769.145 1.505.41 2.182a.5.5 0 1 0 .93-.364A4.986 4.986 0 0 1 3 8c0-.642.12-1.255.34-1.818zm10.25-.364a.5.5 0 0 0-.93.364c.22.563.34 1.176.34 1.818 0 .642-.12 1.255-.34 1.818a.5.5 0 0 0 .93.364C13.856 9.505 14 8.769 14 8c0-.769-.145-1.505-.41-2.182z"/>
+          </svg> RechargePortal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="recharge.html">Recharge</a>
+              </li>
+              <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+              </svg>
+        </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item " href="mailto:haseebdon444@gmail.com">E-mail</a></li>
+            <li><a class="dropdown-item" href="#">terms and conditions</a></li>
+            <li><a class="dropdown-item" href="login.html">logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </section>
+    <h1 id="status-msg" ></h1>
+     <a href="https://retail.onlinesbi.com/retail/login.htm" id="redirect-link" ></a>
+    <section id="payment-section">
+
+    <div class="payment-form">
+        <h2>Select Payment Method</h2>
+        <hr style="color:#fff ;">
+        <p ><a href="#card-payment" class="btn btn-outline-light payment-type">Debit Card</a></p>
+        <p><a href="#card-payment" class="btn btn-outline-light payment-type">Credit Card</a></p>
+        <p><input type="button" class="btn btn-outline-light payment-type"  onclick="netBankingRedirect() " value="Internet Banking"></p>
+        <p><input type="button"  class="btn btn-outline-light payment-type" onclick="UPIRedirect()" value="UPI"></p>
+        <p><a href="./addplan.html" class="btn btn-primary payment-type">Back</a></p>
+    </div>
+  </section>
+
+    <section id="card-payment">
+      <div class="card-payments">
+        <h2>Enter the Details</h2>
+        <hr style="color:#fff;">
+        <form action="" class="needs-validation" novalidate>
+          <p>Card Number</p>
+          <input type="text" name="cardnum " class="cardnum form-control"  aria-describedby="inputGroupPrepend" placeholder="Enter Card Number" pattern="[0-9]+" min="10" max="10" required>
+          <p id="invalid-cardnum"></p>
+          <p>Expiry Month</p>
+          <input type="month" class="expiry-month">
+          <p id="invalid-month" ></p>
+          <p>Recipient's Name</p>
+          <input type="text" name="name " class="name form-control"  aria-describedby="inputGroupPrepend" placeholder="Name" pattern="[a-z]+" required>
+          <p id="invalid-name"></p>
+          <p>cvv</p>
+          <input type="password" name="cvv " class="cvv form-control"  aria-describedby="inputGroupPrepend" placeholder="cvv" pattern="[0-9]+" min="3" max="3" required>
+          <p id="invalid-cvv"></p>
+          <input type="button" class="btn btn-primary" value="confirm" onclick="paymentValidate()">
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container-fluid"> 
+          <p style="color: rgb(165, 165, 165);">&copy;Copyright 2022 RechargePortal</p>
+        </div>
+       </section>
+
+       <script src="../index.js"></script>
+  </body>

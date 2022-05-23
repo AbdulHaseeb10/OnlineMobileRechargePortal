@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    body{
+        background-image: url("../images/backcover.jpg");
+        background-size: cover;
+    }
+</style>
+<body>
+    <h1 class="signup-heading"></h1> <a class="login-redirect" href="login.html"></a>
+    <div class="signup-form ">
+        <h3 class="signup-heading">Sign Up your details here</h3> 
+        <hr style="color: white;">
+
+        <form action="" class="needs-validation" novalidate>
+            <p class="signupusername-heading">Enter Username</p>
+            <input type="text" name="username " class="signupusername form-control" id="basic-url" aria-describedby="inputGroupPrepend" placeholder="username" pattern="[a-z]+[0-9]*" required>
+            <p id="invalid-signupusername"></p>
+            <p class="signuppassword-heading">Enter Password</p>
+            <input type="password" name="password " class="signuppassword form-control" id="basic-url" aria-describedby="inputGroupPrepend" placeholder="password" pattern="[a-z]+[0-9]*" min="8" max="12" required> 
+            <p id="invalid-signuppassword"></p>
+            <p class="signuppassword-heading">Re-Enter Password</p>
+            <input type="password" name="password " class="signupre-password form-control" id="basic-url" aria-describedby="inputGroupPrepend" placeholder="Re-enter password" pattern="[a-z]+[0-9]*" min="8" max="12" required> 
+            <p id="invalid-signupre-password"></p>
+            <input type="button" class="btn btn-primary submit-btn" value="submit" onclick="signupValidate()">
+            <br>
+            <a href="login.html" >Already have an account?</a>
+        </form>
+    </div>
+    <script src="../index.js"></script>
+</body>
+</html>

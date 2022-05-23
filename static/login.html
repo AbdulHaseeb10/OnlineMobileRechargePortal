@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Login</title>
+  </head>
+  <style>
+    body {
+      background-image: url("../images/backcover.jpg");
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="login-form">
+      <h3 class="login-form-heading">Login</h3>
+      <hr style="color: white" />
+      <form action="" class="needs-validation" novalidate>
+        <p class="username-heading">Enter Username</p>
+        <input
+          type="text"
+          name="username "
+          class="username form-control"
+          id="basic-url"
+          aria-describedby="inputGroupPrepend"
+          placeholder="username"
+          pattern="[a-z]+[0-9]*"
+          required
+        />
+        <p id="invalid-username"></p>
+        <p class="password-heading">Enter Password</p>
+        <input
+          type="password"
+          name="password "
+          class="password form-control"
+          id="basic-url"
+          aria-describedby="inputGroupPrepend"
+          placeholder="password"
+          pattern="[a-z]+[0-9]*"
+          min="8"
+          max="12"
+          required
+        />
+        <p id="invalid-password"></p>
+        <a href="./passwordreset.html">forgot password?</a>
+        <p></p>
+        <input
+          type="button"
+          class="btn btn-primary btn-login"
+          value="login"
+          onclick="loginValidate()"
+        />
+        <hr style="color: white" />
+        <p class="or">or</p>
+        <a href="./signup.html" class="btn btn-primary signup-btn">Sign Up</a>
+      </form>
+    </div>
+    <script src="../index.js"></script>
+  </body>
+</html>

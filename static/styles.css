@@ -1,0 +1,144 @@
+body {
+  background-color: #fff;
+}
+
+.navbar-brand {
+  padding-right: 65%;
+}
+
+#ads-section {
+  width: 100%;
+  padding: 100px;
+}
+
+#offers-section {
+  padding: 50px 50px;
+}
+
+#footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40%;
+  background-color: #000;
+  margin-top: 50px;
+}
+
+/*For all cards*/
+.pricing-heading {
+  padding: 10px;
+  margin: 20px;
+}
+
+/*Forms*/
+
+.login-form {
+  width: 400px;
+  height: 560px;
+  background-color: currentColor;
+  margin: auto;
+  /* width: 50%; */
+  padding: 10px;
+  margin-top: 160px;
+}
+.login-form-heading,
+.signup-heading {
+  color: #fff;
+  font-size: 30px;
+}
+.signup-btn {
+  width: 100%;
+  /* margin: auto 58px; */
+}
+.btn-login,
+.submit-btn {
+  width: 30%;
+  margin: 10px;
+}
+.or {
+  font-size: 22px;
+  color: #fff;
+  padding-left: 178px;
+  width: 202px;
+  padding-right: 178px;
+}
+
+.signup-form {
+  width: 600px;
+  height: 600px;
+  background-color: currentColor;
+  margin: auto;
+  margin-top: 140px;
+  padding: 10px;
+}
+.signup-heading {
+  margin: 10px;
+}
+
+/*Recharge Form*/
+
+.fillup-box {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(57, 55, 55);
+  color: #fff;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  padding-top: 50px;
+}
+.fillup-header {
+  font-size: 22px;
+}
+
+.mob-no-heading,
+.operator-heading,
+.plantype-heading,
+.username-heading,
+.password-heading,
+.signupusername-heading,
+.signuppassword-heading {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.btn-form {
+  width: 20%;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.mob-no {
+  width: 100%;
+}
+
+.payment-form {
+  margin-left: 500px;
+  width: 550px;
+  height: 450px;
+  padding: 25px;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  background-color: rgb(57, 55, 55);
+  color: #fff;
+}
+.payment-type {
+  width: 100%;
+  margin-top: 10px;
+}
+.card-payments {
+  width: 500px;
+  height: 550px;
+  background-color: rgb(57, 55, 55);
+  color: #fff;
+  padding: 20px;
+  margin-left: 525px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+#status-msg {
+  text-align: center;
+}
+#redirect-link {
+  margin-left: 650px;
+}
