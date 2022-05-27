@@ -40,7 +40,7 @@ function passwordValidate(){
         return false;
 }
 
-function passwordValidate(){
+function passwordResetValidate(){
     if(document.querySelector(".signupusername").value.length===0){
         document.getElementById("invalid-signupusername").style.color="red";
         document.getElementById("invalid-signupusername").innerHTML=document.querySelector(".signupusername").validationMessage;
