@@ -6,9 +6,7 @@ function loginValidate(){
 }
 document.addEventListener("keydown",function(e){
     if(e.key==='Enter'){
-        if(usernameValidate() && passwordValidate()){
-            window.location.href="../static/index.html"
-        }
+       loginValidate();
     }
 });
 
